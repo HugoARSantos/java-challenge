@@ -11,6 +11,7 @@
 	<groupId>com.wit</groupId>
 	<artifactId>calculator-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
 	<name>calculator-api</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
@@ -29,6 +30,10 @@
 	<properties>
 		<java.version>24</java.version>
 	</properties>
+	    <modules>
+        <module>calculator</module>
+        <module>rest</module>
+    </modules>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
