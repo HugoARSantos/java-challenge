@@ -1,10 +1,13 @@
-package com.example.calculator;
+package com.wit.calculator;
+
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
+@Service
 public class CalculatorService {
 
-    public BigDecimal add(BigDecimal a, BigDecimal b) {
+    public BigDecimal sum(BigDecimal a, BigDecimal b) {
         return a.add(b);
     }
 
@@ -17,9 +20,9 @@ public class CalculatorService {
     }
 
     public BigDecimal divide(BigDecimal a, BigDecimal b) {
-        if (b.compareTo(BigDecimal.ZERO) == 0) {
+        if (b.equals(BigDecimal.ZERO)) {
             throw new ArithmeticException("Cannot divide by zero");
         }
-        return a.divide(b, 10, BigDecimal.ROUND_HALF_UP); // Arredondamento para precisão arbitrária
+        return a.divide(b);
     }
 }
